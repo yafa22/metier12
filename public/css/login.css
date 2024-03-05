@@ -1,0 +1,57 @@
+/* Styles pour la barre de navigation */
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+/* Styles pour le formulaire de connexion */
+.container {
+    background: #2d3e3f;
+    width: 350px;
+    height: auto;
+    padding-bottom: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    padding: 70px 50px 20px 50px;
+}
+
+.textBox {
+    height: 35px;
+    width: 190px;
+    border: none;
+    padding-left: 20px;
+}
+
+.submit {
+    float: right;
+    border: none;
+    color: white;
+    width: 110px;
+    height: 35px;
+    background: #ff6600;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* Ajouter d'autres styles selon vos besoins */

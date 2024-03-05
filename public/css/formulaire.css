@@ -1,0 +1,16 @@
+.center-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Set the height to occupy the full viewport height */
+}
+    .form-container {
+background-color: #f8f9fa; /* Set your preferred background color */
+padding: 60px; /* Add padding for better visual appeal */
+}
+  img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+margin-right:12%;
+}

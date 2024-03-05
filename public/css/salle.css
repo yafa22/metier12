@@ -1,0 +1,53 @@
+.center-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Set the height to occupy the full viewport height */
+}
+  img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
+  .icone{
+    width: 10%;
+    height: 10%;
+  }
+    .ab{
+    width: 100%;
+    height: 100%;
+  }
+   .ab2{
+    width: 20%;
+    height: 20%;
+  }
+   .icone1{
+    width: 10%;
+    height: 10%;
+  }
+  
+.gallery-single img {
+    width: 100%;
+    height: 200px; /* Set the height you desire */
+    object-fit: cover; /* Maintain aspect ratio while covering the container */
+}
+
+/* Styles for "Abonner vous" button */
+
+.menu-box a {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-box a img.ab {
+    width: 20px; /* Set the width you desire for the icon */
+    height: 20px; /* Set the height you desire for the icon */
+    margin-left: 5px; /* Adjust the margin based on your design */
+}

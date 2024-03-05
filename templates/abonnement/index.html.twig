@@ -1,0 +1,40 @@
+
+{% extends 'base1.html.twig' %}
+{% block h4 %}Liste des abonnement{% endblock %}
+{% block table %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Prix</th>
+                <th>Date_debut</th>
+                <th>Date_fin</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for abonnement in abonnements %}
+            <tr>
+                <td>{{ abonnement.id }}</td>
+                <td>{{ abonnement.name }}</td>
+                <td>{{ abonnement.type }}</td>
+                <td>{{ abonnement.prix }}</td>
+                <td>{{ abonnement.dateDebut ? abonnement.dateDebut|date('Y-m-d') : '' }}</td>
+                <td>{{ abonnement.dateFin ? abonnement.dateFin|date('Y-m-d') : '' }}</td>
+                <td>
+                    <a href="#" type="submit" class="btn btn-inverse-warning btn-fw">Accepter</a>
+                    
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}

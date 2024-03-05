@@ -1,0 +1,131 @@
+
+
+{% block style %}
+    <style>
+        body {
+            background-image: url('{{ asset('images/waw.jpg') }}'); /* Replace 'background.jpg' with your image path */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content-container {
+            background-color: rgba(255, 255, 255, 0.8); /* Adjust the alpha value for background color transparency */
+            border: 1px solid #dcdcdc;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            background-color: #3498db;
+        }
+
+        a:hover {
+            background-color: #4CAF50;
+        }
+
+        button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #1c0996;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #1c0996;
+        }
+    </style>
+{% endblock %}
+{% block body %}
+<body>
+    <div class="content-container">
+        <h1 style="color: #3498db;">Abonnement validé!!</h1>
+        <table class="table">
+          
+
+            <tbody>
+                <tr>
+                    <th>Id</th>
+                    <td>{{ abonnement.id }}</td>
+                </tr>
+                <tr>
+                    <th>Name</th>
+                    <td>{{ abonnement.name }}</td>
+                </tr>
+                <tr>
+                    <th>Type</th>
+                    <td>{{ abonnement.type }}</td>
+                </tr>
+                <tr>
+                    <th>Prix</th>
+                    <td>{{ abonnement.prix }}</td>
+                </tr>
+                <tr>
+                    <th>Date_debut</th>
+                    <td>{{ abonnement.dateDebut ? abonnement.dateDebut|date('Y-m-d') : '' }}</td>
+                </tr>
+                <tr>
+                    <th>Date_fin</th>
+                    <td>{{ abonnement.dateFin ? abonnement.dateFin|date('Y-m-d') : '' }}</td>
+                </tr>
+            </tbody>
+        </table>
+            </tbody>
+        </table>
+            </tbody>
+        </table>
+       <h1>Abonnement Details</h1>
+
+          <div class="btn-container">
+                <a href="{{ path('app_abonnement_index') }}" >Valider</a>
+                <a href="{{ path('app_abonnement_edit', {'id': abonnement.id}) }}" >Modifier</a>
+                {{ include('abonnement/_delete_form.html.twig') }}
+            </div>
+</body>
+{% endblock %}
+
+	
+
+	 

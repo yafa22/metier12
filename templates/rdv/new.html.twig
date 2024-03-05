@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<body>
+<div class="center-form">
+        <img src="{{ asset('images/w1.jpg') }}" alt="">
+     <section class="center-form">
+    <div class="container form-container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 >Rendez-vous</h1>
+                {{ form_start(form, {'attr': {'class': 'needs-validation', 'novalidate': 'novalidate'}}) }}
+                <div class="form-group">
+                    {{ form_label(form.email, 'Email') }}
+                    {{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder': 'Enter your email', 'required': 'required'}}) }}
+                    {{ form_errors(form.email) }}
+                </div>
+
+                <div class="form-group">
+                    {{ form_label(form.date, 'Date') }}
+                    {{ form_widget(form.date) }}
+                    {{ form_errors(form.date) }}
+                </div>
+
+                <div class="form-group">
+                    {{ form_label(form.heure, 'Heure') }}
+                    {{ form_widget(form.heure) }}
+                    {{ form_errors(form.heure) }}
+                </div>
+
+                <div class="form-group">
+                    {{ form_label(form.choix, 'Choix') }}
+                    {{ form_widget(form.choix, {'attr': {'class': 'form-control', 'placeholder': 'Enter your choice', 'required': 'required'}}) }}
+                    {{ form_errors(form.choix) }}
+                </div>
+
+                <div class="form-group">
+                    {{ form_label(form.description, 'Description') }}
+                    {{ form_widget(form.description, {'attr': {'class': 'form-control', 'placeholder': 'Enter your description', 'rows': '4'}}) }}
+                    {{ form_errors(form.description) }}
+                </div>
+
+                <button class="btn btn-primary btn-block mt-4">{{ button_label|default('Valider') }}</button>
+
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    </div>
+</body>
+{% endblock %}

@@ -1,0 +1,48 @@
+
+ <link rel="stylesheet" href="{{ asset('css/show.css') }}">   
+{% block body %}
+<body>
+    <div class="content-container">
+        <h1 style="color: #3498db;">Rendez-vous validé!!</h1>
+        <table class="table">
+            <tbody>
+               <table class="table">
+            <tbody>
+                   <table class="table">
+            <tbody>
+                <tr>
+                    <th>Id</th>
+                    <td>{{ rdv.id }}</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>{{ rdv.email }}</td>
+                </tr>
+                <tr>
+                    <th>Date</th>
+                    <td>{{ rdv.date ? rdv.date|date('Y-m-d') : '' }}</td>
+                </tr>
+                <tr>
+                    <th>Heure</th>
+                    <td>{{ rdv.heure ? rdv.heure|date('H:i:s') : '' }}</td>
+                </tr>
+                <tr>
+                    <th>Choix</th>
+                    <td>{{ rdv.choix }}</td>
+                </tr>
+                <tr>
+                    <th>Description</th>
+                    <td>{{ rdv.description }}</td>
+                </tr>
+            </tbody>
+        </table>
+            </tbody>
+        </table>
+            </tbody>
+        </table>
+        <a href="{{ path('app_rdv_new') }}">Valider</a>
+        <button onclick="window.location='{{ path('app_rdv_edit', {'id': rdv.id}) }}'">Modifier</button>
+        <button onclick="window.location='{{ path('app_rdv_delete', {'id': rdv.id}) }}'">Supprimer</button>
+    </div>
+</body>
+{% endblock %}

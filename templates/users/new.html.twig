@@ -1,0 +1,81 @@
+{# new.html.twig #}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site Metas -->
+    <title>Balance Hub</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="{{asset('images/favicon.ico')}}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{{asset('images/apple-touch-icon.png')}}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="{{ asset('css/style.css')}}">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{{ asset('css/responsive.css')}}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ asset('css/custom.css')}}">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+{% block body %}
+<body>
+    <section class="signup">
+        <div class="container">
+            <div class="signup-content">
+                <div class="signup-form">
+                    <h2 class="form-title">Sign up</h2>
+                    <form method="post" action="{{ path('app_users_new') }}" class="register-form" id="register-form">
+                        {{ form_start(form) }}
+                        <div class="form-group">
+                            {{ form_widget(form.name, {'attr': {'placeholder': 'Your Name'}}) }}
+                        </div>
+                        <div class="form-group">
+                            {{ form_widget(form.email, {'attr': {'placeholder': 'Your Email'}}) }}
+                        </div>
+                        <div class="form-group">
+                            {{ form_widget(form.age, {'attr': {'placeholder': 'Your Age'}}) }}
+                        </div>
+                        <div class="form-group">
+                            {{ form_widget(form.genre, {'attr': {'placeholder': 'Your Gender'}}) }}
+                        </div>
+                        <div class="form-group">
+                            {{ form_widget(form.numTel, {'attr': {'placeholder': 'Your Phone Number'}}) }}
+                        </div>
+                        <div class="form-group">
+                            {{ form_widget(form.adresse, {'attr': {'placeholder': 'Your Address'}}) }}
+                        </div>
+                        <div class="form-group">
+                            {{ form_widget(form.password, {'attr': {'placeholder': 'Password'}}) }}
+                        </div>
+                        <div class="form-group form-button">
+                            <input type="submit" name="signup" id="signup" class="form-submit" value="Register">
+                        </div>
+                        {{ form_end(form) }}
+                    </form>
+                </div>
+                <div class="signup-image">
+                    <figure><img src="{{ asset('images/signup.jpg')}}" alt="sign up image"></figure>
+                    <a href="#" class="signup-image-link">I am already a member</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+{% endblock %}
+</html>

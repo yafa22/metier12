@@ -1,0 +1,42 @@
+{% extends 'base1.html.twig' %}
+{% block table %}
+    
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Email</th>
+                <th>Date</th>
+                <th>Heure</th>
+                <th>Choix</th>
+                <th>Description</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for rdv in rdvs %}
+            <tr>
+                <td>{{ rdv.id }}</td>
+                <td>{{ rdv.email }}</td>
+                <td>{{ rdv.date ? rdv.date|date('Y-m-d') : '' }}</td>
+                <td>{{ rdv.heure ? rdv.heure|date('H:i:s') : '' }}</td>
+                <td>{{ rdv.choix }}</td>
+                <td>{{ rdv.description }}</td>
+                <td>
+                   <!-- Update the link in your original template -->
+                     <a href="#" class="btn btn-inverse-warning btn-fw">Accepter</a>
+
+                    <a href="{{ path('app_rdv_delete', {'id': rdv.id}) }}" type="submit" class="btn btn-inverse-warning btn-fw" >supprimer</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}
